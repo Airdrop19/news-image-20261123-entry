@@ -1,7 +1,8 @@
 """Entry for make.fun news-image-20261123: copy the front-page image to /output/entry.png.
 
 The image (entry.png beside this file) sums up world news of Monday 23 November 2026:
-39 dated stories from 7 regions on one front page. It was drawn by build_image.py.
+39 dated stories from 7 regions on one front page, led by NATO's emergency meeting
+over Russian missiles in Poland. It was drawn by build_image.py.
 Standard library only; no network.
 """
 import hashlib
@@ -47,7 +48,7 @@ def main():
     shutil.copyfile(SRC, OUT)
     if sha256(SRC) != sha256(OUT):
         raise ValueError("copied entry.png differs from the source image")
-    print(f"wrote {OUT} ({width}x{height}, {os.path.getsize(OUT)} bytes)")
+    print(f"wrote {OUT} ({width}x{height}, {os.path.getsize(OUT)} bytes) — Monday 23 November 2026")
 
 
 if __name__ == "__main__":
